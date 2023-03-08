@@ -14,6 +14,7 @@ import com.devsuperior.dscatalog.services.exceptions.EntityNotFoundException;
 @ControllerAdvice
 public class ResourceExceptionHandler {
 
+//	tratando o erro 500 pra 404 not found
 	@ExceptionHandler(EntityNotFoundException.class)
 	public ResponseEntity<StandardError> entityNotFound(EntityNotFoundException e, HttpServletRequest request) {
 		StandardError err = new StandardError();
